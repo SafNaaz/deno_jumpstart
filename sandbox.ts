@@ -10,3 +10,11 @@ import { readJson, writeJson } from "https://deno.land/std/fs/mod.ts";
 
 const jsonObj = await readJson("ninjas.json");
 console.log(jsonObj);
+
+const books = [
+  { title: "the way of kings", author: "brandon sendersion" },
+  { title: "name of the wind", author: "patrick rothfus" },
+];
+
+await writeJson("books.json", books);
+console.log("create books.json");
