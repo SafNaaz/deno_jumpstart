@@ -1,7 +1,9 @@
 //DENO
 
-- permissions are the main thing here
+- permissions are the main thing here - done using flags
 
 - standard library is there
 
 - no 'node_modules' like folder
+
+- if package is unstable, add that flag
