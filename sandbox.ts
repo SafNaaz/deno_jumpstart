@@ -1,20 +1,10 @@
-//uuid module
-import { v4 } from "https://deno.land/std/uuid/mod.ts";
+//http module
 
-const uid = v4.generate();
-console.log(uid);
+import { serve } from "https://deno.land/std/http/server.ts";
 
-// fs module
+const server = serve({ port: 3000 });
+console.log("listening for requests on port 3000");
 
-import { readJson, writeJson } from "https://deno.land/std/fs/mod.ts";
-
-const jsonObj = await readJson("ninjas.json");
-console.log(jsonObj);
-
-const books = [
-  { title: "the way of kings", author: "brandon sendersion" },
-  { title: "name of the wind", author: "patrick rothfus" },
-];
-
-await writeJson("books.json", books, { spaces: 2 });
-console.log("create books.json");
+for await (const req of server) {
+  console.log("request made");
+}
