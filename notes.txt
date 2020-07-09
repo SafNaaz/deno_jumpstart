@@ -1,3 +1,7 @@
 //DENO
 
-permissions are the main thing here
+- permissions are the main thing here
+
+- standard library is there
+
+- no 'node_modules' like folder
