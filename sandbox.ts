@@ -6,6 +6,7 @@ const server = serve({ port: 3000 });
 console.log("listening for requests on port 3000");
 
 for await (const req of server) {
+  console.log("request made");
   const url = req.url;
-  req.respond({ body: `Hello ninjas, you visited ${url}` });
+  req.respond({ body: `Hello again ninjas, you visited ${url}` });
 }
