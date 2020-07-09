@@ -16,5 +16,5 @@ const books = [
   { title: "name of the wind", author: "patrick rothfus" },
 ];
 
-await writeJson("books.json", books);
+await writeJson("books.json", books, { spaces: 2 });
 console.log("create books.json");
