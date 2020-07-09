@@ -1,18 +1,21 @@
-//reading files
+// //reading files
 
-const decoder = new TextDecoder("utf-8");
+// const decoder = new TextDecoder("utf-8");
 
-const data = await Deno.readFile("readme.txt");
-console.log(decoder.decode(data));
+// const data = await Deno.readFile("readme.txt");
+// console.log(decoder.decode(data));
 
-//writing files
+// //writing files
 
-const encoder = new TextEncoder();
-const text = encoder.encode("hello again, ninjas");
+// const encoder = new TextEncoder();
+// const text = encoder.encode("hello again, ninjas");
 
-await Deno.writeFile("readme.txt", text);
+// await Deno.writeFile("readme.txt", text);
 
-//renaming and removing files
+// //renaming and removing files
 
-await Deno.rename("readme.txt", "deleteme.txt");
-await Deno.remove("deleteme.txt");
+// await Deno.rename("readme.txt", "deleteme.txt");
+// await Deno.remove("deleteme.txt");
+
+const data = await Deno.readTextFile("readme.txt");
+console.log(data);
